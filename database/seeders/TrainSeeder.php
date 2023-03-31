@@ -22,14 +22,14 @@ class TrainSeeder extends Seeder
             
             $train->company = $faker->asciify();
 
-            $train->departure_station = $faker->randomElement(["Torino Porta Nuova","Torino Porta Susa", "Milano Centrale", "Roma Termini"]);
-            $train->arrival_station = $faker->randomElement(["Torino Porta Nuova","Torino Porta Susa", "Milano Centrale", "Roma Termini"]);
+            $train->departure_station = $faker->asciify();
+            $train->arrival_station = $faker->asciify();
             $train->departure_time = $faker->time();
             $train->arrival_time = $faker->time();
             $train->train_code = $faker->numerify("Treno-numero-###");
             $train->number_of_carriages = rand(2, 10);
-            $train->on_time = $faker->boolean();
-            $train->deleted = $faker->boolean();
+            $train->on_time = $faker->asciify();
+            $train->deleted = $faker->asciify();
             
             $train->save();
         }
